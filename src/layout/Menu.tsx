@@ -54,21 +54,6 @@ const Menu = ({dense = false}: MenuProps) => {
       }}
     >
       <SubMenu
-        handleToggle={() => handleToggle("menuProjectDevProcess")}
-        isOpen={state.menuProjectDevProcess}
-        name="pos.menu.processDevProject"
-        icon={<categories.icon />}
-        dense={dense}
-      >
-        <MenuItemLink
-          to="/quytrinh"
-          state={{_scrollToTop: true}}
-          primaryText={translate(`resources.quytrinh`)}
-          leftIcon={<categories.icon />}
-          dense={dense}
-        />
-      </SubMenu>
-      <SubMenu
         handleToggle={() => handleToggle("menuProjected")}
         isOpen={state.menuProjected}
         name="pos.menu.projected"
@@ -98,105 +83,6 @@ const Menu = ({dense = false}: MenuProps) => {
           state={{_scrollToTop: true}}
           primaryText={translate(`resources.duandalam`)}
           leftIcon={<categories.icon />}
-          dense={dense}
-        />
-      </SubMenu>
-      <SubMenu
-        handleToggle={() => handleToggle("menuLibrary")}
-        isOpen={state.menuLibrary}
-        name="pos.menu.library"
-        icon={<categories.icon />}
-        dense={dense}
-      >
-        <MenuItemLink
-          to="/customers"
-          state={{_scrollToTop: true}}
-          primaryText={translate(`resources.customers.name`, {
-            smart_count: 2,
-          })}
-          leftIcon={<categories.icon />}
-          dense={dense}
-        />
-        <MenuItemLink
-          to="/segments"
-          state={{_scrollToTop: true}}
-          primaryText={translate(`resources.segments.name`, {
-            smart_count: 2,
-          })}
-          leftIcon={<LabelIcon />}
-          dense={dense}
-        />
-        <MenuItemLink
-          to="/thuvientulieu"
-          state={{_scrollToTop: true}}
-          primaryText={translate(`resources.thuvientulieu`)}
-          leftIcon={<LabelIcon />}
-          dense={dense}
-        />
-      </SubMenu>
-      <SubMenu
-        handleToggle={() => handleToggle("menuHome")}
-        isOpen={state.menuHome}
-        name="pos.menu.home"
-        icon={<categories.icon />}
-        dense={dense}
-      >
-        <MenuItemLink
-          to="/customers"
-          state={{_scrollToTop: true}}
-          primaryText={translate(`resources.customers.name`, {
-            smart_count: 2,
-          })}
-          leftIcon={<categories.icon />}
-          dense={dense}
-        />
-        <MenuItemLink
-          to="/segments"
-          state={{_scrollToTop: true}}
-          primaryText={translate(`resources.segments.name`, {
-            smart_count: 2,
-          })}
-          leftIcon={<LabelIcon />}
-          dense={dense}
-        />
-        <MenuItemLink
-          to="/trangchu"
-          state={{_scrollToTop: true}}
-          primaryText={translate(`resources.trangchu`)}
-          leftIcon={<LabelIcon />}
-          dense={dense}
-        />
-      </SubMenu>
-      <SubMenu
-        handleToggle={() => handleToggle("menuOthers")}
-        isOpen={state.menuOthers}
-        name="pos.menu.others"
-        icon={<categories.icon />}
-        dense={dense}
-      >
-        <MenuItemLink
-          to="/customers"
-          state={{_scrollToTop: true}}
-          primaryText={translate(`resources.customers.name`, {
-            smart_count: 2,
-          })}
-          leftIcon={<categories.icon />}
-          dense={dense}
-        />
-        <MenuItemLink
-          to="/segments"
-          state={{_scrollToTop: true}}
-          primaryText={translate(`resources.segments.name`, {
-            smart_count: 2,
-          })}
-          leftIcon={<LabelIcon />}
-          dense={dense}
-        />
-        <MenuItemLink
-          to="/thongtinkhac"
-          state={{_scrollToTop: true}}
-          primaryText={translate(`resources.thongtinkhac`)}
-          leftIcon={<LabelIcon />}
           dense={dense}
         />
       </SubMenu>

@@ -19,7 +19,7 @@ function App() {
       title=""
       dataProvider={dataProvider}
       authProvider={authProvider}
-      dashboard={Dashboard}
+      // dashboard={Dashboard}
       loginPage={Login}
     >
       {/* <CustomRoutes>
