@@ -4,11 +4,13 @@ import {Login, Layout} from "./layout";
 import {Route} from "react-router";
 import {Dashboard} from "./dashboard";
 import authProvider from "./authProvider";
-import jsonServerProvider from "ra-data-json-server";
 import duandalam from "./duandalam";
+import myProvider from "./myProvider";
+import {fetchJson as httpClient} from "./httpClient";
 
-const dataProvider = jsonServerProvider(
-  "https://my-json-server.typicode.com/tiennguyen00/demo"
+const dataProvider = myProvider(
+  "https://my-json-server.typicode.com/tiennguyen00/demo",
+  httpClient
 );
 
 function App() {
