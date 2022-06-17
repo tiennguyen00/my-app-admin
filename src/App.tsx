@@ -5,8 +5,10 @@ import {Route} from "react-router";
 import {Dashboard} from "./dashboard";
 import authProvider from "./authProvider";
 import duandalam from "./duandalam";
+import thuvientulieu from "./thuvientulieu";
 import myProvider from "./myProvider";
 import {fetchJson as httpClient} from "./httpClient";
+import thongtinkhac from "./thongtinkhac";
 
 const dataProvider = myProvider(
   "https://my-json-server.typicode.com/tiennguyen00/demo",
@@ -34,6 +36,8 @@ function App() {
     <Resource name="reviews" {...reviews} /> */}
       {/* <Resource name="users" list={ListGuesser} /> */}
       <Resource name="duandalam" {...duandalam} />
+      <Resource name="thuvientulieu" {...thuvientulieu} />
+      <Resource name="thongtinkhac" {...thongtinkhac} />
     </Admin>
   );
 }
