@@ -5,6 +5,7 @@ import {Route} from "react-router";
 import {Dashboard} from "./dashboard";
 import authProvider from "./authProvider";
 import jsonServerProvider from "ra-data-json-server";
+import duandalam from "./duandalam";
 
 const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
 
@@ -28,6 +29,7 @@ function App() {
     <Resource name="categories" {...categories} />
     <Resource name="reviews" {...reviews} /> */}
       <Resource name="users" list={ListGuesser} />
+      {/* <Resource name="users" {...duandalam} /> */}
     </Admin>
   );
 }
