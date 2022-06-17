@@ -27,13 +27,14 @@ const CategoryList = () => (
 
 const CategoryGrid = () => {
   const {data, isLoading} = useListContext<Category>();
+  console.log("DDATA: ", data);
   if (isLoading) {
     return null;
   }
   return (
     <Grid container spacing={2} sx={{marginTop: "1em"}}>
       {data.map(record => (
-        <Grid key={record.id} xs={12} sm={6} md={4} lg={3} xl={2} item>
+        <Grid key={record.keyID} xs={12} sm={6} md={4} lg={3} xl={2} item>
           <Card>
             <CardMedia
               image={`https://drive.google.com/uc?export=view&id=${record.images[0]}`}

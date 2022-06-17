@@ -27,9 +27,6 @@ export const fetchJson = (url: any, options: any) => {
     requestHeaders["Content-Type"] = "application/json";
   }
 
-  const token = localStorage.getItem("auth-token");
-  requestHeaders["Authorization"] = `JWT ${token}`;
-
   return axios(url, {...options, headers: requestHeaders}).then(
     response => {
       let {status, statusText, data} = response;

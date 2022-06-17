@@ -61,7 +61,7 @@ export default (apiUrl: any, httpClient: any) => {
         break;
       }
       case GET_ONE:
-        url = `${apiUrl}/${resource}/${params?.id}`;
+        url = `${apiUrl}/${resource}/${params.id}`;
         break;
       case GET_MANY: {
         const query = {
@@ -130,7 +130,6 @@ export default (apiUrl: any, httpClient: any) => {
     params: any
   ) => {
     const {headers, data} = response;
-    console.log(type, response);
     switch (type) {
       case GET_LIST:
       case GET_MANY:
@@ -164,8 +163,6 @@ export default (apiUrl: any, httpClient: any) => {
 
   // return funtion
   return (type: any, resource: any, params: any) => {
-    console.log("Convert: ", params);
-
     // simple-rest doesn't handle filters on UPDATE route, so we fallback to calling UPDATE n times instead
     if (type === UPDATE_MANY) {
       return Promise.all(
