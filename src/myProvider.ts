@@ -164,6 +164,8 @@ export default (apiUrl: any, httpClient: any) => {
 
   // return funtion
   return (type: any, resource: any, params: any) => {
+    console.log("Convert: ", params);
+
     // simple-rest doesn't handle filters on UPDATE route, so we fallback to calling UPDATE n times instead
     if (type === UPDATE_MANY) {
       return Promise.all(

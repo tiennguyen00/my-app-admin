@@ -27,7 +27,6 @@ const CategoryList = () => (
 
 const CategoryGrid = () => {
   const {data, isLoading} = useListContext<Category>();
-  console.log("data: ", data);
   if (isLoading) {
     return null;
   }
