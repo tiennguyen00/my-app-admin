@@ -7,7 +7,9 @@ import authProvider from "./authProvider";
 import jsonServerProvider from "ra-data-json-server";
 import duandalam from "./duandalam";
 
-const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
+const dataProvider = jsonServerProvider(
+  "https://my-json-server.typicode.com/tiennguyen00/demo"
+);
 
 function App() {
   return (
@@ -28,8 +30,8 @@ function App() {
     <Resource name="products" {...products} />
     <Resource name="categories" {...categories} />
     <Resource name="reviews" {...reviews} /> */}
-      <Resource name="users" list={ListGuesser} />
-      {/* <Resource name="users" {...duandalam} /> */}
+      {/* <Resource name="users" list={ListGuesser} /> */}
+      <Resource name="duandalam" {...duandalam} />
     </Admin>
   );
 }
