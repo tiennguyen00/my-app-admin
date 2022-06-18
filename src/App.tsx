@@ -9,6 +9,7 @@ import thuvientulieu from "./thuvientulieu";
 import myProvider from "./myProvider";
 import {fetchJson as httpClient} from "./httpClient";
 import thongtinkhac from "./thongtinkhac";
+import banner from "./banner";
 
 const dataProvider = myProvider(
   "https://my-json-server.typicode.com/tiennguyen00/demo",
@@ -21,6 +22,7 @@ function App() {
       title=""
       dataProvider={dataProvider}
       authProvider={authProvider}
+      layout={Layout}
       // dashboard={Dashboard}
       loginPage={Login}
     >
@@ -28,16 +30,14 @@ function App() {
       <Route path="/configuration" element={<Configuration />} />
       <Route path="/segments" element={<Segments />} />
     </CustomRoutes> */}
-      {/* <Resource name="customers" {...visitors} />
-    <Resource name="commands" {...orders} options={{label: "Orders"}} />
-    <Resource name="invoices" {...invoices} />
-    <Resource name="products" {...products} />
-    <Resource name="categories" {...categories} />
-    <Resource name="reviews" {...reviews} /> */}
-      {/* <Resource name="users" list={ListGuesser} /> */}
+
       <Resource name="duandalam" {...duandalam} />
       <Resource name="thuvientulieu" {...thuvientulieu} />
       <Resource name="thongtinkhac" {...thongtinkhac} />
+      <Resource name="banner" {...banner} />
+      <Resource name="vechungtoi" {...thongtinkhac} />
+      <Resource name="nhagobamien" {...thongtinkhac} />
+      <Resource name="dichvucungcap" {...thongtinkhac} />
     </Admin>
   );
 }

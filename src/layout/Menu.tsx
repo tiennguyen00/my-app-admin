@@ -18,22 +18,12 @@ import categories from "../categories";
 // import reviews from "../reviews";
 import SubMenu from "./SubMenu";
 
-type MenuName =
-  | "menuProjectDevProcess"
-  | "menuProjected"
-  | "menuLibrary"
-  | "menuHome"
-  | "menuOthers";
+type MenuName = "menuHome";
 
 const Menu = ({dense = false}: MenuProps) => {
   const [state, setState] = useState({
-    menuProjectDevProcess: false,
-    menuProjected: true,
-    menuLibrary: true,
     menuHome: true,
-    menuOthers: true,
   });
-  const translate = useTranslate();
   const [open] = useSidebarState();
 
   const handleToggle = (menu: MenuName) => {
@@ -54,38 +44,63 @@ const Menu = ({dense = false}: MenuProps) => {
       }}
     >
       <SubMenu
-        handleToggle={() => handleToggle("menuProjected")}
-        isOpen={state.menuProjected}
-        name="pos.menu.projected"
+        handleToggle={() => handleToggle("menuHome")}
+        isOpen={state.menuHome}
+        name="Trang chu"
         icon={<categories.icon />}
         dense={dense}
       >
         <MenuItemLink
-          to="/products"
+          to="/banner"
           state={{_scrollToTop: true}}
-          primaryText={translate(`resources.products.name`, {
-            smart_count: 2,
-          })}
+          primaryText="Banner"
           leftIcon={<categories.icon />}
           dense={dense}
         />
         <MenuItemLink
-          to="/categories"
+          to="/vechungtoi"
           state={{_scrollToTop: true}}
-          primaryText={translate(`resources.categories.name`, {
-            smart_count: 2,
-          })}
+          primaryText="Về chúng tôi"
           leftIcon={<categories.icon />}
           dense={dense}
         />
         <MenuItemLink
-          to="/duandalam"
+          to="/nhagobamien"
           state={{_scrollToTop: true}}
-          primaryText={translate(`resources.duandalam`)}
+          primaryText="Nhà gỗ ba miền"
+          leftIcon={<categories.icon />}
+          dense={dense}
+        />
+        <MenuItemLink
+          to="/dichvucungcap"
+          state={{_scrollToTop: true}}
+          primaryText="Dịch vụ cung cấp"
           leftIcon={<categories.icon />}
           dense={dense}
         />
       </SubMenu>
+      <MenuItemLink
+        to="/duandalam"
+        state={{_scrollToTop: true}}
+        primaryText="Dự án đã làm"
+        leftIcon={<categories.icon />}
+        dense={dense}
+      />
+      <MenuItemLink
+        to="/thuvientulieu"
+        state={{_scrollToTop: true}}
+        primaryText="Thư viện tư liệu"
+        leftIcon={<categories.icon />}
+        dense={dense}
+      />
+
+      <MenuItemLink
+        to="/thongtinkhac"
+        state={{_scrollToTop: true}}
+        primaryText="Thông tin khác"
+        leftIcon={<categories.icon />}
+        dense={dense}
+      />
     </Box>
   );
 };
